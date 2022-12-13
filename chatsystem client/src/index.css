@@ -60,6 +60,8 @@ button{
 .chat-messages{
   height: 80%;
   border: 1px solid #000;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .send-message{
