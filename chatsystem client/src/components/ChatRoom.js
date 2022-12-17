@@ -8,6 +8,7 @@ const ChatRoom = () => {
     const [publicChats, setPublicChats] = useState([]);
     const [tab, setTab] = useState("CHATROOM");
     const [notificationTab, setNotificationTab] = useState(new Map());
+    const [isValidUsername, setIsValidUsername] = useState(true);
     const [userData, setUserData] = useState({
         username: '',
         receivername: '',
@@ -134,7 +135,13 @@ const ChatRoom = () => {
     }
 
     const registerUser = () => {
-        connect();
+        if(userData.username.length > 0){
+            connect();
+            setIsValidUsername(true)
+        }else{
+            //alert("Lütfen isminizi giriniz.")
+            setIsValidUsername(false)
+        }
     }
 
     return (
@@ -195,7 +202,9 @@ const ChatRoom = () => {
                     <button type="button" onClick={registerUser}>
                         connect
                     </button>
+                    {!isValidUsername ? <span>GARDAŞ önce ismini gir sonra tıkla. uğraştırma</span> : null}
                 </div>}
+
         </div>
     )
 }
