@@ -1,5 +1,4 @@
-# COMP-301-Chat-Application
+# COMP 301 Term Project - Chat Application
 
 npm install
-
 npm start
