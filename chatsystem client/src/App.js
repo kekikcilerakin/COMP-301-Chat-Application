@@ -1,9 +1,9 @@
 import React from 'react'
-import ChatRoom from './components/ChatRoom'
+import ChatApp from './components/ChatApp'
 
 const App = () => {
   return (
-    <ChatRoom />
+    <ChatApp />
   )
 }
 
